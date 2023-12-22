@@ -12,6 +12,7 @@ CFLAGS += -Wall
 EXE = hello-makefile
 
 OBJS = hello-makefile.o
+DESTDIR ?= /usr/local/bin
 
 .PHONY: all
 
@@ -32,5 +33,5 @@ clean:
 .PHONY: install
 
 install: $(EXE)
-	install -m 0777 -d ${DESTDIR}/usr/local/bin/
-	install -m 0755 ${EXE} ${DESTDIR}/usr/local/bin/
+	install -m 0777 -d ${DESTDIR}/
+	install -m 0755 ${EXE} ${DESTDIR}/

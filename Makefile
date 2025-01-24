@@ -21,10 +21,10 @@ all: $(EXE)
 # add it on the linker command line for Yocto Project toolchain.
 
 $(EXE): $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $<
+	$(CC) $(LDFLAGS) -o $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $^
+	$(CC) $(CFLAGS) -c $<
 
 .PHONY: clean
 
